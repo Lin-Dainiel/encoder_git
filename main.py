@@ -29,4 +29,6 @@ tgt_seq = torch.stack([
 arc_embeding_table = nn.Embedding(max_num_src_words+1, model_dim)
 tgt_embeding_table = nn.Embedding(max_num_tgt_words+1, model_dim)
 
-print(arc_embeding_table)
+arc_embeding = arc_embeding_table(src_seq)
+tgt_embeding = tgt_embeding_table(tgt_seq)
+print(arc_embeding)
